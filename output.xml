@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="stylesheet.xsl" ?>
+<solutions>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="spaniard" color="blue" pet="dog" drink="orange juice" smoke="lucky strike"/>
+        <house position="3" nationality="english" color="red" pet="horse" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="fox" drink="tea" smoke="kools"/>
+        <house position="5" nationality="japanese" color="ivory" pet="zebra" drink="water" smoke="parliaments"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="spaniard" color="blue" pet="dog" drink="orange juice" smoke="lucky strike"/>
+        <house position="3" nationality="english" color="red" pet="zebra" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="fox" drink="tea" smoke="kools"/>
+        <house position="5" nationality="japanese" color="ivory" pet="horse" drink="water" smoke="parliaments"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="fox" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="english" color="red" pet="horse" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="zebra" drink="tea" smoke="kools"/>
+        <house position="5" nationality="spaniard" color="ivory" pet="dog" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="zebra" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="english" color="red" pet="horse" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="fox" drink="tea" smoke="kools"/>
+        <house position="5" nationality="spaniard" color="ivory" pet="dog" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="spaniard" color="blue" pet="dog" drink="water" smoke="chesterfields"/>
+        <house position="3" nationality="japanese" color="ivory" pet="fox" drink="milk" smoke="parliaments"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="zebra" drink="tea" smoke="kools"/>
+        <house position="5" nationality="english" color="red" pet="horse" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="fox" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="spaniard" color="ivory" pet="dog" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="zebra" drink="tea" smoke="kools"/>
+        <house position="5" nationality="english" color="red" pet="horse" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="zebra" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="spaniard" color="ivory" pet="dog" drink="milk" smoke="chesterfields"/>
+        <house position="4" nationality="ukrainian" color="yellow" pet="fox" drink="tea" smoke="kools"/>
+        <house position="5" nationality="english" color="red" pet="horse" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="horse" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="spaniard" color="yellow" pet="dog" drink="milk" smoke="kools"/>
+        <house position="4" nationality="ukrainian" color="ivory" pet="zebra" drink="tea" smoke="chesterfields"/>
+        <house position="5" nationality="english" color="red" pet="fox" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="japanese" color="blue" pet="zebra" drink="water" smoke="parliaments"/>
+        <house position="3" nationality="spaniard" color="yellow" pet="dog" drink="milk" smoke="kools"/>
+        <house position="4" nationality="ukrainian" color="ivory" pet="horse" drink="tea" smoke="chesterfields"/>
+        <house position="5" nationality="english" color="red" pet="fox" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+    <solution>
+        <house position="1" nationality="norwegian" color="green" pet="snails" drink="coffee" smoke="old gold"/>
+        <house position="2" nationality="ukrainian" color="blue" pet="zebra" drink="tea" smoke="chesterfields"/>
+        <house position="3" nationality="japanese" color="ivory" pet="fox" drink="milk" smoke="parliaments"/>
+        <house position="4" nationality="spaniard" color="yellow" pet="dog" drink="water" smoke="kools"/>
+        <house position="5" nationality="english" color="red" pet="horse" drink="orange juice" smoke="lucky strike"/>
+    </solution>
+</solutions>
