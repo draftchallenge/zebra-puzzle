@@ -47,6 +47,4 @@ public class Main {
         String output = formatter.format(solutions.toArray(new Solution[solutions.size()]));
         writer.write(output);
     }
-
-
 }
