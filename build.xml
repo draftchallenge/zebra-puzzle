@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<project name="Zebra-test" default="run-local"
+         xmlns:ivy="antlib:org.apache.ivy.ant"
+         xmlns:jacoco="antlib:org.jacoco.ant">
+
+    <property name="dir.src" value="src"/>
+    <property name="dir.test" value="test"/>
+    <property name="dir.lib" value="lib"/>
+    <property name="dir.out" value="out"/>
+    <property name="dir.report" value="report"/>
+
+    <property name="ivy.version" value="2.3.0"/>
+
+    <path id="classpath">
+        <pathelement location="${dir.out}"/>
+        <fileset dir="${dir.lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="clean">
+        <delete includeemptydirs="true" quiet="true">
+            <fileset dir="${dir.report}"/>
+            <fileset dir="${dir.out}"/>
+            <fileset dir="${dir.lib}"/>
+        </delete>
+    </target>
+
+    <target name="get-ivy">
+        <mkdir dir="${dir.lib}"/>
+        <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar" dest="${dir.lib}/ivy.jar" usetimestamp="true"/>
+        <taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="classpath"/>
+        <!--<ivy:cleancache/>-->
+    </target>
+
+    <target name="get-jars" depends="get-ivy">
+        <ivy:retrieve pattern="lib/[conf]/[artifact]-[type]-[revision].[ext]" symlink="true"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${dir.out}"/>
+        <javac srcdir="${dir.src}" destdir="${dir.out}" debug="true" classpathref="classpath"/>
+        <javac srcdir="${dir.test}" destdir="${dir.out}" debug="true" classpathref="classpath"/>
+        <copy todir="${dir.out}">
+            <fileset dir="${dir.src}" excludes="**/*.java"/>
+        </copy>
+    </target>
+
+    <target name="test">
+        <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml" classpathref="classpath"/>
+
+        <jacoco:coverage destfile="${dir.out}/jacoco.exec">
+            <junit fork="true" forkmode="once" printsummary="true" haltonfailure="true" showoutput="false">
+                <batchtest fork="yes">
+                    <fileset dir="${dir.out}">
+                        <include name="**/*Test.class"/>
+                    </fileset>
+                </batchtest>
+                <formatter type="plain" usefile="false"/>
+                <classpath refid="classpath"/>
+            </junit>
+        </jacoco:coverage>
+    </target>
+
+    <target name="report" depends="test">
+        <jacoco:report>
+            <executiondata>
+                <file file="${dir.out}/jacoco.exec"/>
+            </executiondata>
+            <structure name="JaCoCo Code Coverage Report">
+                <classfiles>
+                    <fileset dir="${dir.out}"/>
+                </classfiles>
+                <sourcefiles encoding="UTF-8">
+                    <fileset dir="${dir.src}"/>
+                </sourcefiles>
+            </structure>
+
+            <html destdir="${dir.report}"/>
+            <csv destfile="${dir.report}/report.csv"/>
+            <xml destfile="${dir.report}/report.xml"/>
+
+            <jacoco:check>
+                <rule element="CLASS" excludes="*Test">
+                    <limit counter="LINE" value="COVEREDRATIO" minimum="0.80"/>
+                    <limit counter="CLASS" value="MISSEDCOUNT" maximum="0"/>
+                </rule>
+            </jacoco:check>
+        </jacoco:report>
+    </target>
+
+    <target name="run-server" depends="clean, get-ivy, get-jars, compile, test"/>
+    <target name="run-local" depends="clean, get-ivy, get-jars, compile, test, report"/>
+
+</project>

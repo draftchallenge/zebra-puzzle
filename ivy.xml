@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+
+    <info organisation="mnio.net" module="zebra-test"/>
+
+    <configurations defaultconfmapping="default->default">
+        <conf name="default"/>
+        <conf name="test"/>
+    </configurations>
+
+    <dependencies>
+        <!--<dependency org="" name="" rev=""/>-->
+        <dependency org="junit" name="junit" rev="4.10" conf="test->default"/>
+        <dependency org="org.jacoco" name="org.jacoco.ant" rev="0.7+" conf="test->default"/>
+    </dependencies>
+</ivy-module>

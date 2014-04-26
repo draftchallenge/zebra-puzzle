@@ -26,8 +26,9 @@ public class MainTest extends TestCase {
 
         System.out.println(actual);
 
-        assertTrue(actual.startsWith("Done!\r\nNumber of solutions: 10"));
-        assertTrue(actual.endsWith("Total created solution attempts (= streets): 53820\r\nConstraints invoked: 16"));
+        assertTrue(actual.contains("Number of solutions: 10"));
+        assertTrue(actual.contains("Total created solution attempts (= streets): 53820"));
+        assertTrue(actual.contains("Constraints invoked: 16"));
 
         assertTrue(new File(Main.INPUT_FILENAME).exists());
         assertTrue(new File(Main.OUTPUT_FILENAME).exists());

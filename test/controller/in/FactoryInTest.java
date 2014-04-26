@@ -8,4 +8,9 @@ public class FactoryInTest extends TestCase {
         Object o = new Object();
         assertNull(FactoryIn.getReader(o));
     }
+
+    public void testGetTransformerNull() throws Exception {
+        assertNull(FactoryIn.getTransformer(null));
+        assertNotNull(FactoryIn.getTransformer(FactoryIn.FORMAT.CVS));
+    }
 }

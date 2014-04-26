@@ -13,12 +13,14 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static final String INPUT_FILENAME = "input.cvs";
+    public static final String ROOT_DIR = "ressources/"
+
+    public static final String INPUT_FILENAME = ROOT_DIR + "input.cvs";
     public static final FactoryIn.FORMAT INPUT_FORMAT = FactoryIn.FORMAT.CVS;
 
     public static final FactoryOut.FORMAT OUTPUT_FORMAT = FactoryOut.FORMAT.XML;
     public static final FactoryOut.OUTPUT OUTPUT_DESTINATION = FactoryOut.OUTPUT.FILE;
-    public static final String OUTPUT_FILENAME = "output.xml";
+    public static final String OUTPUT_FILENAME = ROOT_DIR + "output.xml";
 
     public static void main(String[] args) throws Exception {
         SolutionTemplate template = readFromFile();

@@ -8,16 +8,12 @@ public class FileWriter implements AbstractWriter {
 
     @Override
     public void write(String content) {
-        String file = fileName;
-        if (file == null) {
-            file = "output";
-        }
+        String file = fileName == null ? "output" : fileName;
 
         try {
             java.io.FileWriter writer = new java.io.FileWriter(file);
             writer.write(content);
             writer.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
